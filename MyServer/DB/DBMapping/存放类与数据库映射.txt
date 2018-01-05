@@ -1,0 +1,1 @@
+按照这个原理去操作数据库了：生成新的线程（NHibernateHelper类）-使用表格管理类读取数据库（马上要建立的UserInfo_Manager类）-按照映射关系类（UserInfo_Mapping）的规定-储存数据到数据表的MODEL类(UserInfo_Model)
