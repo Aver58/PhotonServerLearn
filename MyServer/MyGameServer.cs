@@ -23,20 +23,38 @@ namespace MyServer
         //Handler集合
         public Dictionary<OperationCode, BaseHandler> HandlerDict = new Dictionary<OperationCode, BaseHandler>();
         public static MyGameServer Instance{get;private set;}
+
+        /// <summary>
+        /// 当有客户端连接上服务器时，将引用这个方法，建立一个客户端处理类，我们叫它ClientPeer,他是一个继承自PeerBase的自定义类 
+        /// </summary>
+        /// <param name="initRequest"></param>
+        /// <returns></returns>
+        protected override PeerBase CreatePeer(InitRequest initRequest)
+        {
+            return new MyPeer(initRequest);
+        }
         /// <summary>  
         /// 服务器初始化  
         /// </summary>  
         /// 当有客户端连接上服务器时，将引用这个方法，建立一个客户端处理类，我们叫它ClientPeer,他是一个继承自PeerBase的自定义类  
-
         protected override void Setup()
         {
             //初始化各个Handler
             Instance = this;
             InitHandler();
-            InitConfiguration();
+            //InitConfiguration();
             InitLogging();
             LogInfo("-----------------------");
             LogInfo("Server is Setup");
+        }
+
+        /// <summary>  
+        /// 服务器关闭  
+        /// </summary> 
+        /// 当有客户端连接上服务器时，将引用这个方法，建立一个客户端处理类，我们叫它ClientPeer,他是一个继承自PeerBase的自定义类  
+        protected override void TearDown()
+        {
+            LogInfo("Server is Down");
         }
 
         public void InitHandler()
@@ -51,11 +69,7 @@ namespace MyServer
             HandlerDict.Add(registerHandler.OpCode, registerHandler);
         }
 
-        //当有客户端连接上服务器时，将引用这个方法，建立一个客户端处理类，我们叫它ClientPeer,他是一个继承自PeerBase的自定义类  
-        protected override PeerBase CreatePeer(InitRequest initRequest)
-        {
-            return new MyPeer(initRequest);
-        }
+        
        
         /// <summary>
         /// 初始化配置
@@ -111,14 +125,7 @@ namespace MyServer
             IUserManager userManager = new UserManager();
             userManager.Add(user2);
         }
-        /// <summary>  
-        /// 服务器关闭  
-        /// </summary> 
-        /// 当有客户端连接上服务器时，将引用这个方法，建立一个客户端处理类，我们叫它ClientPeer,他是一个继承自PeerBase的自定义类  
-        protected override void TearDown()
-        {
-            LogInfo("Server is Down");
-        }
+      
         #region 日志功能  
 
         //接口变量的定义
