@@ -1,6 +1,6 @@
-C:\Users\Administrator\source\repos\MyServer\GameServer\obj\Debug\GameServer.csprojResolveAssemblyReference.cache
-C:\Users\Administrator\source\repos\MyServer\GameServer\obj\Debug\GameServer.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\source\repos\MyServer\GameServer\bin\Debug\GameServer.dll
 C:\Users\Administrator\source\repos\MyServer\GameServer\bin\Debug\GameServer.pdb
+C:\Users\Administrator\source\repos\MyServer\GameServer\obj\Debug\GameServer.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\source\repos\MyServer\GameServer\obj\Debug\GameServer.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\source\repos\MyServer\GameServer\obj\Debug\GameServer.dll
 C:\Users\Administrator\source\repos\MyServer\GameServer\obj\Debug\GameServer.pdb

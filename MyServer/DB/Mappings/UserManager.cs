@@ -29,7 +29,10 @@ namespace MyServer.DB.DBMapping
             }
 
         }
-
+        /// <summary>
+        /// 更新玩家信息
+        /// </summary>
+        /// <param name="user"></param>
         public void Update(UserInfo user)
         {
             using (ISession session = NHibernateHelper.OpenSession())
@@ -41,7 +44,10 @@ namespace MyServer.DB.DBMapping
                 }
             }
         }
-
+        /// <summary>
+        /// 移除玩家信息
+        /// </summary>
+        /// <param name="user"></param>
         public void Remove(UserInfo user)
         {
             using (ISession session = NHibernateHelper.OpenSession())
@@ -53,7 +59,11 @@ namespace MyServer.DB.DBMapping
                 }
             }
         }
-
+        /// <summary>
+        /// 获得玩家的ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public UserInfo GetById(int id)
         {
             using (ISession session = NHibernateHelper.OpenSession())
@@ -66,6 +76,8 @@ namespace MyServer.DB.DBMapping
                 }
             }
         }
+
+
         /// <summary>
         /// 访问数据库、是否有该用户名
         /// </summary>
@@ -80,8 +92,10 @@ namespace MyServer.DB.DBMapping
             }
         }
 
-
-
+        /// <summary>
+        /// 获得所有的玩家
+        /// </summary>
+        /// <returns></returns>
         public ICollection<UserInfo> GetAllUsers()
         {
             using (ISession session = NHibernateHelper.OpenSession())

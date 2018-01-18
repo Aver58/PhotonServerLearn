@@ -19,13 +19,15 @@ namespace MyServer.Common
         Failed //失败
     }
 
-    public enum ParameterCode : byte //区分传送数据的时候，参数的类型
+    public enum UserCode : byte //区分传送数据的时候，参数的类型
     {
         Username,//用户名
         Password,  //密码
     }
 
-    //获取字典的值
+    /// <summary>
+    /// 获取字典的值
+    /// </summary>
     public class DictTool
     {
         public static T2 GetValue<T1, T2>(Dictionary<T1, T2> dict, T1 key)

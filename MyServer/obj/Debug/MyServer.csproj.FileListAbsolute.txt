@@ -1,3 +1,4 @@
+E:\Software\Photon\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\MyServer\bin\hibernate.cfg.xml
 E:\Software\Photon\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\MyServer\bin\log4net.config
 E:\Software\Photon\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\MyServer\bin\MyServer.dll
 E:\Software\Photon\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\MyServer\bin\MyServer.pdb
@@ -5,5 +6,3 @@ C:\Users\Administrator\source\repos\MyServer\MyServer\obj\Debug\MyServer.csprojR
 C:\Users\Administrator\source\repos\MyServer\MyServer\obj\Debug\MyServer.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\source\repos\MyServer\MyServer\obj\Debug\MyServer.dll
 C:\Users\Administrator\source\repos\MyServer\MyServer\obj\Debug\MyServer.pdb
-E:\Software\Photon\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\MyServer\bin\hibernate.cfg.xml.txt
-E:\Software\Photon\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\MyServer\bin\DB\DBMapping\User.hbm.xml.txt

@@ -11,8 +11,14 @@ using System.Text;
 /// </summary>
 public abstract class BaseHandler
 {
-    public OperationCode OpCode;
+    public OperationCode OpCode;//请求代码
 
+    /// <summary>
+    /// 响应请求的抽象类
+    /// </summary>
+    /// <param name="operationRequest"></param>
+    /// <param name="sendParameters"></param>
+    /// <param name="peer"></param>
     public abstract void OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters, MyPeer peer);
 }
 

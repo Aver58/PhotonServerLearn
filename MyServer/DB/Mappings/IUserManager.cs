@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/// <summary>
+/// 管理接口
+/// </summary>
 interface IUserManager
 {
     void Add(UserInfo user);

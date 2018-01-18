@@ -82,10 +82,10 @@
     <Compile Include="DB\DBHelper.cs" />
     <Compile Include="DB\DBManager\Image_Mapping.cs" />
     <Compile Include="DB\DBManager\UserInfo_Manager.cs" />
-    <Compile Include="DB\DBMapping\IUserManager.cs" />
-    <Compile Include="DB\DBMapping\NHibernateHelper.cs" />
-    <Compile Include="DB\DBMapping\UserInfo_Mapping.cs" />
-    <Compile Include="DB\DBMapping\UserManager.cs" />
+    <Compile Include="DB\Mappings\IUserManager.cs" />
+    <Compile Include="DB\Mappings\NHibernateHelper.cs" />
+    <Compile Include="DB\Mappings\UserInfo_Mapping.cs" />
+    <Compile Include="DB\Mappings\UserManager.cs" />
     <Compile Include="DB\Model\Image_Model.cs" />
     <Compile Include="DB\Model\UserInfo.cs" />
     <Compile Include="Handler\LoginHandler.cs" />
@@ -102,11 +102,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DB\DBMapping\存放类与数据库映射.txt" />
-    <EmbeddedResource Include="DB\DBMapping\User.hbm.xml.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <Content Include="hibernate.cfg.xml.txt">
+    <EmbeddedResource Include="DB\Mappings\UserInfo.hbm.xml" />
+    <Content Include="DB\Mappings\存放类与数据库映射.txt" />
+    <Content Include="hibernate.cfg.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

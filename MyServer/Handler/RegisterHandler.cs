@@ -24,7 +24,7 @@ class RegisterHandler : BaseHandler
         OperationResponse response = new OperationResponse(operationRequest.OperationCode);
         if (user == null)
         {
-            user = new UserInfo() { userName = username, password = password };
+            user = new UserInfo() { Username = username, Password = password };
             manager.Add(user);
             response.ReturnCode = (short)ReturnCode.Success;
         }

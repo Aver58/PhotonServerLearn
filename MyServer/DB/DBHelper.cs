@@ -10,21 +10,21 @@ namespace MyServer.DB
 
     public static class DBHelper
     {
-        static MySqlConnection SQL;//SQL
+        private static MySqlConnection mySQL;//SQL
         /// <summary>
         /// 与数据库建立连接
         /// </summary>
         public static void ConnectSql()
         {
-            string connectStr = "server=127.0.0.1;port=3306;database=Aver3;user=root;password=op90--;";
-            SQL = new MySqlConnection(connectStr);
+            string connectStr = "server=127.0.0.1;port=3306;database=aver3;user=root;password=op90--;";
+            mySQL = new MySqlConnection(connectStr);//实例化链接
             try
             {
-                SQL.Open();
+                mySQL.Open();//开启连接
 
                 //在这里执行其它操作
 
-                //  Console.WriteLine("已经建立连接");
+                Console.WriteLine("已经建立连接");
             }
             catch (Exception e)
             {
@@ -32,7 +32,7 @@ namespace MyServer.DB
             }
             finally
             {
-                SQL.Close();
+                mySQL.Close();
             }
             //string str = "Server=127.0.0.1;User ID=root;Password=op90--;Database=aver3;CharSet=utf8;";
             //SQL = new MySqlConnection(str);//实例化链接
@@ -41,11 +41,11 @@ namespace MyServer.DB
         /// <summary>
         /// 执行查询命令MySQLDataReader
         /// </summary>
-        public static void dataReader()
+        public static void DataReader()
         {
             string sql = "select * from users";
 
-            MySqlCommand cmd = new MySqlCommand(sql, SQL);
+            MySqlCommand cmd = new MySqlCommand(sql, mySQL);
             //cmd.ExecuteReader();//执行一些查询
             //cmd.ExecuteNonQuery();//插入 删除
             //cmd.ExecuteScalar();//执行一些查询，返回一个单个的值
@@ -66,7 +66,7 @@ namespace MyServer.DB
         {
             string sql = "insert into users(username,password,registerdate) values('csdFu','234','" + DateTime.Now + "')";
 
-            MySqlCommand cmd = new MySqlCommand(sql, SQL);
+            MySqlCommand cmd = new MySqlCommand(sql, mySQL);
 
             int result = cmd.ExecuteNonQuery();//返回值是数据库中受影响的数据的行数
         }
@@ -77,7 +77,7 @@ namespace MyServer.DB
         {
             string sql = "delete from users where id = 4";
 
-            MySqlCommand cmd = new MySqlCommand(sql, SQL);
+            MySqlCommand cmd = new MySqlCommand(sql, mySQL);
 
             int result = cmd.ExecuteNonQuery();//返回值是数据库中受影响的数据的行数
         }
@@ -88,7 +88,7 @@ namespace MyServer.DB
         {
             string sql = "update users set username='sdfsedfwer',password='23242342432' where id = 4";
 
-            MySqlCommand cmd = new MySqlCommand(sql, SQL);
+            MySqlCommand cmd = new MySqlCommand(sql, mySQL);
 
             int result = cmd.ExecuteNonQuery();//返回值是数据库中受影响的数据的行数
         }
@@ -109,7 +109,7 @@ namespace MyServer.DB
                 //我们自己按照查询条件去组拼sql，当参数多时容易出错。
                 string sql = "select * from users where username =@para1 and password = @para2 ";
 
-                MySqlCommand cmd = new MySqlCommand(sql, SQL);
+                MySqlCommand cmd = new MySqlCommand(sql, mySQL);
                 cmd.Parameters.AddWithValue("para1", username);
                 cmd.Parameters.AddWithValue("para2", password);
 
