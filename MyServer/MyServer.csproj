@@ -58,6 +58,9 @@
       <HintPath>E:\Software\Photon\Photon-OnPremise-Server-SDK_v4-0-29-11263\lib\PhotonHostRuntimeInterfaces.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>.\protobuf-net.dll</HintPath>
+    </Reference>
     <Reference Include="Remotion.Linq, Version=2.1.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
       <HintPath>..\packages\Remotion.Linq.2.1.2\lib\net45\Remotion.Linq.dll</HintPath>
     </Reference>
@@ -77,11 +80,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\ParameterTool.cs" />
+    <Compile Include="Common\ProtoBufUtility.cs" />
     <Compile Include="Handler\BaseHandler.cs" />
     <Compile Include="Common\GameEnum.cs" />
     <Compile Include="DB\DBHelper.cs" />
-    <Compile Include="DB\DBManager\Image_Mapping.cs" />
-    <Compile Include="DB\DBManager\UserInfo_Manager.cs" />
+    <Compile Include="DB\Manager\Image_Mapping.cs" />
+    <Compile Include="DB\Manager\UserInfo_Manager.cs" />
     <Compile Include="DB\Mappings\IUserManager.cs" />
     <Compile Include="DB\Mappings\NHibernateHelper.cs" />
     <Compile Include="DB\Mappings\UserInfo_Mapping.cs" />
@@ -93,6 +98,10 @@
     <Compile Include="MyGameServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Handler\RegisterHandler.cs" />
+    <Compile Include="Scripts\ClientDemo.cs" />
+    <Compile Include="Scripts\NetModel.cs" />
+    <Compile Include="Scripts\NetUtility.cs" />
+    <Compile Include="Scripts\ServerDemo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="log4net.config">
@@ -102,7 +111,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DB\Mappings\UserInfo.hbm.xml" />
+    <EmbeddedResource Include="DB\Mappings\UserInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <Content Include="DB\Mappings\存放类与数据库映射.txt" />
     <Content Include="hibernate.cfg.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

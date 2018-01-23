@@ -87,7 +87,10 @@ namespace MyServer.DB.DBMapping
         {
             using (ISession session = NHibernateHelper.OpenSession())
             {
-                UserInfo user = session.CreateCriteria(typeof(UserInfo)).Add(Restrictions.Eq("Username", username)).UniqueResult<UserInfo>();
+                UserInfo user = session.
+                    CreateCriteria(typeof(UserInfo)).
+                    Add(Restrictions.Eq("Username", username)).
+                    UniqueResult<UserInfo>();
                 return user;
             }
         }

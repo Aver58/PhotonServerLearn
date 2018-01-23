@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyServer.Common
 {
-    public enum OperationCode : byte //区分请求和响应的类型 
+    public enum OperateCode : byte //区分请求和响应的类型 
     {
         Default,//默认请求
         Login, //登录 

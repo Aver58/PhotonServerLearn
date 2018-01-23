@@ -7,7 +7,7 @@ class RegisterHandler : BaseHandler
 {
     public RegisterHandler()
     {
-        OpCode = OperationCode.Register;
+        OpCode = OperateCode.Register;
     }
     /// <summary>
     /// 处理客户端的注册请求
@@ -17,8 +17,8 @@ class RegisterHandler : BaseHandler
     /// <param name="peer"></param>
     public override void OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters, MyPeer peer)
     {
-        string username = DictTool.GetValue<byte, object>(operationRequest.Parameters, (byte)ParameterCode.Username) as string;
-        string password = DictTool.GetValue<byte, object>(operationRequest.Parameters, (byte)ParameterCode.Password) as string;
+        string username = DictTool.GetValue<byte, object>(operationRequest.Parameters, (byte)UserCode.Username) as string;
+        string password = DictTool.GetValue<byte, object>(operationRequest.Parameters, (byte)UserCode.Password) as string;
         UserManager manager = new UserManager();
         UserInfo user = manager.GetByUsername(username);
         OperationResponse response = new OperationResponse(operationRequest.OperationCode);

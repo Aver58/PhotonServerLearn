@@ -21,7 +21,7 @@ namespace MyServer
     {
 
         //Handler集合:下发给子Handler去处理响应
-        public Dictionary<OperationCode, BaseHandler> HandlerDict = new Dictionary<OperationCode, BaseHandler>();
+        public Dictionary<OperateCode, BaseHandler> HandlerDict = new Dictionary<OperateCode, BaseHandler>();
         public new static MyGameServer Instance{ get ; private set ; }
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace MyServer
         {
             //初始化各个Handler
             Instance = this;
-            //InitHandler();
+            InitHandler();
             InitConfiguration();
             InitLogging();
             LogInfo("-----------------------");
@@ -69,10 +69,12 @@ namespace MyServer
 
             RegisterHandler registerHandler = new RegisterHandler();
             HandlerDict.Add(registerHandler.OpCode, registerHandler);
+            LogInfo("-----------------------");
+            LogInfo("InitHandler");
         }
 
-        
-       
+
+
         /// <summary>
         /// 初始化配置
         /// </summary>
@@ -81,8 +83,8 @@ namespace MyServer
             var configuration = new Configuration();
             configuration.Configure();                                  //解析DefaultHibernateCfgFileName = "hibernate.cfg.xml";
             configuration.AddAssembly(Assembly.GetExecutingAssembly()); //解析 映射文件  User.hbm.xml 、、把所有的.hbm.xml文件解析一下Adds all of the assembly's embedded resources whose names end with .hbm.xml.
-           
         }
+
         #region 数据库操作
         ////创建连接session进行添加操作
         //ISessionFactory sessionFactory = null;
@@ -119,6 +121,7 @@ namespace MyServer
         ////在任何时候都要使用事务，即使是在读取、查询数据的时候，为什么呢？因为你不清楚数据库什么时候操作失败，如何恢复原来数据。
         ////而NHibernate中的事务（可以通过 transaction.Rollback()方法），帮助我们完成这些事情。
         //ITransaction transaction = session.BeginTransaction();
+
         ////进行操作
         //UserInfo user1 = new UserInfo() { Username = "cydr34", Password = "g3463" };
 

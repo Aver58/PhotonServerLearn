@@ -7,8 +7,9 @@ public class LoginHandler : BaseHandler
 {
     public LoginHandler()
     {
-        OpCode = OperationCode.Login;
+        OpCode = OperateCode.Login;
     }
+
     /// <summary>
     /// 处理客户端端的登录请求
     /// </summary>
@@ -17,8 +18,8 @@ public class LoginHandler : BaseHandler
     /// <param name="peer"></param>
     public override void OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters, MyPeer peer)
     {
-        string username = DictTool.GetValue(operationRequest.Parameters, (byte)ParameterCode.Username) as string;
-        string password = DictTool.GetValue(operationRequest.Parameters, (byte)ParameterCode.Password) as string;
+        string username = DictTool.GetValue(operationRequest.Parameters, (byte)UserCode.Username) as string;
+        string password = DictTool.GetValue(operationRequest.Parameters, (byte)UserCode.Password) as string;
         UserManager manager = new UserManager();
         bool isSuccess = manager.VerifyUser(username, password);
 
