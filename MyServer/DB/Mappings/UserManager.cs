@@ -26,6 +26,7 @@ namespace MyServer.DB.DBMapping
                     session.Save(user);
                     transaction.Commit();
                 }
+                session.Close();
             }
 
         }
