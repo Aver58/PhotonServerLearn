@@ -121,8 +121,7 @@
     <Content Include="Lib\log4net.dll" />
     <Content Include="Lib\Photon.SocketServer.dll" />
     <Content Include="Lib\PhotonHostRuntimeInterfaces.dll" />
-    <Content Include="MySql.Data.dll" />
-    <Content Include="protobuf-net.dll" />
+    <Content Include="脚本解释.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="log4net.config" />

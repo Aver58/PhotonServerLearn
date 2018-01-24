@@ -1,0 +1,7 @@
+C:\Users\Administrator\source\repos\MyServer\WebSocket\bin\Debug\WebSocket.exe.config
+C:\Users\Administrator\source\repos\MyServer\WebSocket\bin\Debug\WebSocket.exe
+C:\Users\Administrator\source\repos\MyServer\WebSocket\bin\Debug\WebSocket.pdb
+C:\Users\Administrator\source\repos\MyServer\WebSocket\obj\Debug\WebSocket.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\source\repos\MyServer\WebSocket\obj\Debug\WebSocket.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\MyServer\WebSocket\obj\Debug\WebSocket.exe
+C:\Users\Administrator\source\repos\MyServer\WebSocket\obj\Debug\WebSocket.pdb
