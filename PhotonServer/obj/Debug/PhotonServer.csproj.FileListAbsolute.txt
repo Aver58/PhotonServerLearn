@@ -1,0 +1,6 @@
+C:\Users\Administrator\source\repos\MyServer\PhotonServer\obj\Debug\PhotonServer.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\source\repos\MyServer\PhotonServer\obj\Debug\PhotonServer.csproj.CoreCompileInputs.cache
+E:\Software\Photon\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\MyServer\bin\PhotonServer.dll
+E:\Software\Photon\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\MyServer\bin\PhotonServer.pdb
+C:\Users\Administrator\source\repos\MyServer\PhotonServer\obj\Debug\PhotonServer.dll
+C:\Users\Administrator\source\repos\MyServer\PhotonServer\obj\Debug\PhotonServer.pdb
